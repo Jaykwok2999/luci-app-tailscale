@@ -37,11 +37,11 @@ jobs:
         rm -rf ./luci-app-tailscale
         
          
-        git clone https://github.com/asvow/luci-app-tailscale.git ./tmp
-        mv ./tmp/luci-app-tailscale ./
-        rm -rf ./tmp
-        rm -rf ./README.md
-        rm -rf ./LICENSE
+        #git clone https://github.com/asvow/luci-app-tailscale.git ./tmp
+        #mv ./tmp/luci-app-tailscale ./
+        #rm -rf ./tmp
+        #rm -rf ./README.md
+        #rm -rf ./LICENSE
         
         
         
