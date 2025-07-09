@@ -38,7 +38,7 @@ jobs:
         
          
         git clone https://github.com/asvow/luci-app-tailscale.git ./tmp/luci-app-tailscale
-        mv ./tmp/* ./
+        mv ./tmp/* ./luci-app-tailscale
         rm -rf ./tmp
         rm -rf ./README.md
         rm -rf ./LICENSE
