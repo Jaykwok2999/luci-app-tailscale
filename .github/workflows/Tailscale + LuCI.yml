@@ -9,8 +9,8 @@ on:
         type: boolean
         default: true
 
- # schedule:
- #   - cron: '0 16 * * *'
+  schedule:
+    - cron: '0 16 * * *'
 
 permissions:
   contents: write
@@ -51,7 +51,7 @@ jobs:
             sed -i "s/^PKG_VERSION:=.*/PKG_VERSION:=$LATEST/; s/^PKG_HASH:=.*/PKG_HASH:=$HASH/" tailscale/Makefile
             
             git config user.name "github-actions[bot]"
-            git config user.email "194788255+Jaykwok2999@users.noreply.github.com"
+            git config user.email "194788255+github-actions[bot]@users.noreply.github.com"
             git commit -am "tailscale: update to $LATEST" || true
             git push || true
           fi
@@ -287,7 +287,7 @@ jobs:
             | 构建时间 | ${{ needs.check-version.outputs.build_time }} CST |
             | UPX 压缩 | ${{ env.ENABLE_COMPRESSION == 'true' && '✅' || '❌' }} |
             
-            #📖 **安装说明请查看 [README](https://github.com/${{ github.repository }}#readme)**
+            📖 **安装说明请查看 [README](https://github.com/${{ github.repository }}#readme)**
           artifacts: "release/*"
           token: ${{ secrets.GITHUB_TOKEN }}
 
